@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "mongodb": "^6.6.0",
+    "@auth/mongodb-adapter": "^3.0.0",
+    "@types/bcrypt": "^5.0.2",
+    "mongodb": "^6.6.1",
     "next": "14.2.3",
+    "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.0"

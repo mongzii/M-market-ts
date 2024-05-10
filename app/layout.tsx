@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import AuthProvider from "./lib/next-auth";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,7 @@ export default function RootLayout({
           <Link href="/cart">Cart</Link>
           <Link href="/board">Q&A</Link>
         </div>
-        {children}
+        <AuthProvider>{children}</AuthProvider>
         <div className="footer">Copyright 2024 by Moon</div>
       </body>
     </html>
