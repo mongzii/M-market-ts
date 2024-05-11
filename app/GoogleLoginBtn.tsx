@@ -9,7 +9,7 @@ export default function GoogleLoginBtn() {
         signIn();
       }}
     >
-      구글로그인
+      로그인
     </button>
   );
 }
