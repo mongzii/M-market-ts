@@ -1,6 +1,5 @@
-import GoogleLoginBtn from "../GoogleLoginBtn";
+import LoginBtn from "../LoginBtn";
 import HeaderP from "../lib/next-auth/HeaderP";
-// import Test from "../lib/next-auth/Test";
 import Link from "next/link";
 
 export default function Login() {
@@ -11,7 +10,7 @@ export default function Login() {
 
       {/* <HeaderP /> */}
       {/* //로그인하는거 */}
-      <GoogleLoginBtn />
+      <LoginBtn />
       <Link href="/member">회원가입</Link>
     </div>
   );
