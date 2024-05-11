@@ -1,4 +1,6 @@
 "use client";
+import LoginBtn from "@/app/LoginBtn";
+import LogoutBtn from "@/app/LogoutBtn";
 import { useSession } from "next-auth/react";
 
 export default function HeaderP() {
@@ -14,9 +16,14 @@ export default function HeaderP() {
         {status === "loading" ? (
           <p>Loading</p>
         ) : status === "authenticated" ? (
-          <p>{session?.user?.name}님</p>
+          <div>
+            <p>{session?.user?.name}님</p>
+            <LogoutBtn />
+          </div>
         ) : (
-          <p>로그인하세요</p>
+          <div>
+            <LoginBtn />
+          </div>
         )}
       </h2>
     </div>
