@@ -11,7 +11,7 @@ interface IboardItem {
   author?: string;
 }
 interface BoardProps {
-  data: Promise<IboardItem[]>;
+  data: IboardItem[];
 }
 
 export default function BoardItem({ data }: BoardProps) {
@@ -23,25 +23,27 @@ export default function BoardItem({ data }: BoardProps) {
 
   //   console.log(post);
   // console.log(data);
-  const promiseTest = (data: any) =>
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (data) {
-          resolve("ok?");
-          console.log(data);
-        } else {
-          reject("nn?");
-        }
-      }, 1000);
-    })
-      .then(res => {
-        console.log(res);
-      })
-      .catch(err => console.log(err));
+  // ---------------------------------------
+  // const promiseTest = (data: any) =>
+  //   new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       if (data) {
+  //         resolve("ok?");
+  //         console.log(data);
+  //       } else {
+  //         reject("nn?");
+  //       }
+  //     }, 1000);
+  //   })
+  //     .then(res => {
+  //       console.log(res);
+  //     })
+  //     .catch(err => console.log(err));
   return (
     <div>
       <h2>Q & A</h2>
-      <button onClick={data => promiseTest(data)}></button>
+      {/* <button onClick={data => promiseTest(data)}></button> */}
+      {data[0].content}
     </div>
   );
 }
