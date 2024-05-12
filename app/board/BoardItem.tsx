@@ -1,18 +1,9 @@
 "use client";
 
-import { ObjectId } from "mongodb";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-
-interface IboardItem {
-  _id: string;
-  title: string;
-  content: string;
-  author?: string;
-}
-interface BoardProps {
-  data: IboardItem[];
-}
+//import { ObjectId } from "mongodb";
+//import Link from "next/link";
+//import { useEffect, useState } from "react";
+import type { IboardItem, BoardProps } from "../board/page";
 
 export default function BoardItem({ data }: BoardProps) {
   //  const [post, setPost] = useState<IboardItem[]>([]);
@@ -42,7 +33,6 @@ export default function BoardItem({ data }: BoardProps) {
   return (
     <div>
       <h2>Q & A</h2>
-      {/* <button onClick={data => promiseTest(data)}></button> */}
       {data[0].content}
     </div>
   );
