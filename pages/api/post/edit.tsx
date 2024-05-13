@@ -7,6 +7,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method == "POST") {
+    //console.log(req.body);
     //console.log(요청.body);
     //DB에 있는 데이터를 수정하라.
     const client = await connectDB;
