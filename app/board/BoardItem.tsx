@@ -1,61 +1,45 @@
 "use client";
 
-//import { ObjectId } from "mongodb";
-//import Link from "next/link";
-//import { useEffect, useState } from "react";
 import type { IboardItem, BoardProps } from "../board/page";
+import Link from "next/link";
+import WriteBtn from "./WriteBtn";
+import axios from "axios";
 
 export default function BoardItem({ data }: BoardProps) {
-  //  const [post, setPost] = useState<IboardItem[]>([]);
-
-  //   useEffect(() => {
-  //     data.then(res => setPost(res)).catch(error => console.log(error));
-  //   }, [data]);
-
-  //   console.log(post);
-  // console.log(data);
-  // ---------------------------------------
-  // const promiseTest = (data: any) =>
-  //   new Promise((resolve, reject) => {
-  //     setTimeout(() => {
-  //       if (data) {
-  //         resolve("ok?");
-  //         console.log(data);
-  //       } else {
-  //         reject("nn?");
-  //       }
-  //     }, 1000);
-  //   })
-  //     .then(res => {
-  //       console.log(res);
-  //     })
-  //     .catch(err => console.log(err));
   return (
     <div>
       <h2>Q & A</h2>
-      {data[0].content}
+      {data.map((a, i) => {
+        return (
+          <div className="list-item" key={i}>
+            <Link href={`/detail/` + data[i]._id}>
+              <h4> {data[i].title}</h4>
+            </Link>
+            <p>{data[i].content}</p>
+            <Link href={`/board/edit/` + data[i]._id}>수정</Link>
+            <button
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
+                axios
+                  .delete("/api/post/delete", {
+                    data: data[i]._id,
+                  })
+                  .then(() => {
+                    const parentElement = e.currentTarget
+                      .parentElement as HTMLElement;
+                    parentElement.style.opacity = "0";
+                    setTimeout(() => {
+                      parentElement.style.display = "none";
+                    }, 1000);
+                  })
+                  .catch(err => console.error(err));
+              }}
+            >
+              삭제
+            </button>
+          </div>
+        );
+      })}
+      <WriteBtn />
     </div>
   );
 }
-
-// export default function BoardItem({ data }: BoardProps) {
-//   //   useEffect(() => {
-//   //     data.then(res => {
-//   //       console.log(res);
-//   //     });
-//   //   }, [data]);
-
-//   return (
-//     <div>
-//       <h2>Q & A</h2>
-//     </div>
-//   );
-// }
-
-// export default function BoardItem() {
-//   return (
-//     <div>
-//       <h2>Q & A</h2>
-//     </div>
-//   );
-// }
