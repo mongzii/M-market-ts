@@ -11,9 +11,11 @@ export default async function handler(
   const db = client.db("market");
   let result = await db
     .collection("comment")
-    .find({ parent: new ObjectId(req.body.id) })
+    .find({ parent: new ObjectId(req.query.id as string) })
+    // .find({ parent: new ObjectId("65699478e619dc02d6af6819") })
     // .find({ _id: new ObjectId(req.body) })
     .toArray();
+
   //console.log(result);
-  //   res.status(200).json(result);
+  res.status(200).json(result);
 }
