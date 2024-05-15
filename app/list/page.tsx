@@ -4,15 +4,23 @@ import ListLeft from "../ListLeft";
 import { useRouter } from "next/navigation";
 import { productData } from "@/util/productData";
 import { useDispatch } from "react-redux";
-// import { addcart } from "@/redux/store";
+import { addcart } from "@/redux/cartSlice";
 
 export default function List() {
   let router = useRouter();
   const dispatch = useDispatch();
-  const handleClick = () => {
-    console.log("메롱");
-  };
 
+  const handleClick = (
+    id: number,
+    product: string,
+    count: number,
+    price: string
+  ) => {
+    //console.log("메롱");
+    dispatch(addcart({ id, product, count, price }));
+    router.push("/cart");
+  };
+  //console.log(productData);
   return (
     <div>
       <h2 className="title">상품목록</h2>
@@ -28,7 +36,13 @@ export default function List() {
                   <img src={`/jacket${i + 1}.png`} className="food-img" />
                   <h4>{productData.jacket[i].product}</h4>
                   <h4>{productData.jacket[i].price}원</h4>
-                  <button onClick={() => handleClick()}>장바구니</button>
+                  <button
+                    onClick={() =>
+                      handleClick(a.id, a.product, a.count, a.price)
+                    }
+                  >
+                    장바구니
+                  </button>
                 </div>
               );
             })}
@@ -38,7 +52,8 @@ export default function List() {
                   <img src={`/shoe${i + 1}.png`} className="food-img" />
                   <h4>{productData.shoe[i].product}</h4>
                   <h4>{productData.shoe[i].price}원</h4>
-                  <button onClick={() => handleClick()}>장바구니</button>
+                  {/* <button onClick={() => handleClick()}>장바구니</button> */}
+                  <button>장바구니</button>
                 </div>
               );
             })}
