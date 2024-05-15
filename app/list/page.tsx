@@ -13,11 +13,10 @@ export default function List() {
   const handleClick = (
     id: number,
     product: string,
-    count: number,
-    price: string
+    price: number,
+    count: number
   ) => {
-    //console.log("메롱");
-    dispatch(addcart({ id, product, count, price }));
+    dispatch(addcart({ id, product, price, count }));
     router.push("/cart");
   };
   //console.log(productData);
@@ -38,7 +37,7 @@ export default function List() {
                   <h4>{productData.jacket[i].price}원</h4>
                   <button
                     onClick={() =>
-                      handleClick(a.id, a.product, a.count, a.price)
+                      handleClick(a.id, a.product, a.price, a.count)
                     }
                   >
                     장바구니
