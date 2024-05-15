@@ -51,8 +51,13 @@ export default function List() {
                   <img src={`/shoe${i + 1}.png`} className="food-img" />
                   <h4>{productData.shoe[i].product}</h4>
                   <h4>{productData.shoe[i].price}원</h4>
-                  {/* <button onClick={() => handleClick()}>장바구니</button> */}
-                  <button>장바구니</button>
+                  <button
+                    onClick={() =>
+                      handleClick(a.id, a.product, a.price, a.count)
+                    }
+                  >
+                    장바구니
+                  </button>
                 </div>
               );
             })}

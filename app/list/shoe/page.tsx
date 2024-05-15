@@ -3,10 +3,21 @@
 import ListLeft from "@/app/ListLeft";
 import { useRouter } from "next/navigation";
 import { productData } from "@/util/productData";
+import { useDispatch } from "react-redux";
+import { addcart } from "@/redux/cartSlice";
 
 export default function ShoePage() {
   let router = useRouter();
-  // const handleClick=()=>{}
+  const dispatch = useDispatch();
+  const handleClick = (
+    id: number,
+    product: string,
+    price: number,
+    count: number
+  ) => {
+    dispatch(addcart({ id, product, price, count }));
+    router.push("/cart");
+  };
 
   return (
     <div>
@@ -23,7 +34,13 @@ export default function ShoePage() {
                   <img src={`/shoe${i + 1}.png`} className="food-img" />
                   <h4>{productData.shoe[i].product}</h4>
                   <h4>{productData.shoe[i].price}원</h4>
-                  <button>장바구니</button>
+                  <button
+                    onClick={() =>
+                      handleClick(a.id, a.product, a.price, a.count)
+                    }
+                  >
+                    장바구니
+                  </button>
                 </div>
               );
             })}
