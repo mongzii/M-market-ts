@@ -17,7 +17,7 @@ export interface IIresult {
   result: Iresult | null;
 }
 
-export default async function Edit(props: Iprops) {
+export default async function Edit(props: any) {
   //console.log(props);
   const client = await connectDB;
   const db = client.db("market");
