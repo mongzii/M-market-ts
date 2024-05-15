@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { cp } from "fs";
 
 export interface Icart {
   id: number;
@@ -40,6 +39,7 @@ export const CartState = createSlice({
         common === -1 ? state.push(action.payload) : state[common].count++;
       }
     },
+
     //장바구니에서삭제
     deletecart: (state, action) => {
       const common: number = state.findIndex(
@@ -50,18 +50,14 @@ export const CartState = createSlice({
       return state.filter(el => el.id !== state[common].id);
     },
 
+    //cart에서 수량 조절하는 것 , 플러스
     countUp: (state, action) => {
-      //cart에서 수량 조절하는 것 , 플러스
       state[action.payload].count++;
-      //console.log(Item);
-      //console.log(action.payload);
-      //console.log(state[action.payload].count);
     },
+
+    //cart에서 수량 조절하는 것, 마이너스
     countDown: (state, action) => {
-      //  countDown: (state, action: PayloadAction<number>) => {
-      //cart에서 수량 조절하는 것, 마이너스
       state[action.payload].count--;
-      //   console.log(action.payload);
     },
   },
 });
