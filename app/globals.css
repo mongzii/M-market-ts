@@ -1,542 +1,102 @@
 body {
   margin: 0;
-  background: #171717;
+  /* background: #171717; */
+  background: pink;
   color: #eeeeee;
   box-sizing: border-box;
 }
-/* ----------------top슬라이드부분------------ */
-.main-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-.main-top {
-  display: flex;
-  justify-content: center;
-  margin-top: 6rem;
-}
-.slide-container {
-  width: 900px;
-  display: flex;
-  overflow: hidden;
-}
 
-.slide-box img {
-  width: 900px;
-  height: 550px;
-  /* transform: translate(-700px); */
-}
-
-/* ---------------------------------------- */
-.main-middle {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 80%;
-  gap: 3rem;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-  > img {
-    height: 40rem;
-  }
-}
-.main-bottom {
-  display: flex;
-  justify-content: center;
-  > img {
-    height: 35rem;
-  }
-}
-
-.head-design1 {
-  /* border: 5px solid red; */
-}
-.head-memberInfo {
-  color: blue;
-  line-height: 250%;
-}
-.title {
-  text-align: center;
-  margin-top: 50px;
-}
-.title-sub {
-  text-align: center;
-}
-.food {
-  margin: 20px auto;
-  width: 200px;
-  background: white;
-  color: black;
-  padding: 20px;
-  border-radius: 5px;
-  position: relative;
-}
-.merchandise {
-  display: flex;
-  flex-direction: row;
-}
-.list-left {
-  /* border: 10px solid blue; */
-  width: 20%;
-  margin-left: 20px;
-  margin-right: 20px;
-
-  li {
-    padding-top: 20px;
-    padding-left: 20px;
-    font-size: 1.5rem;
-  }
-  li:hover {
-    cursor: pointer;
-    color: #337357;
-  }
-}
-.list-right {
-  /* border: 10px solid red; */
-  width: 80%;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.goods {
+/* -----------------헤더---------------------------------------- */
+.headerpart {
   /* border: 10px solid black; */
+  background: #eeeeee;
+  color: #171717;
+  height: 13vh;
+  height: 100%;
+  width: 100vw;
+}
+.navmenu {
+  /* border: 5px solid red; */
+  height: 7vh;
   display: flex;
-  flex-wrap: wrap;
-  margin: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  gap: 2rem;
+
+  > a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    @media screen and (max-width: 1023px) {
+      font-size: 1rem;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 0.8rem;
+    }
+  }
 }
 
-.navbar {
-  /* background: #00224d; */
-  /* background-color: #222831; */
-  background: #eeeeee;
-  padding: 20px;
-  color: #171717;
-  width: 100%;
+.navlogin {
+  /* border: 5px solid blue; */
+  height: 6vh;
+  height: 100%;
 }
-.navbar a {
-  margin-right: 10px;
-  text-decoration: none;
-  color: #171717;
-}
-.navbar button {
-  background-color: #171717;
-  color: #eeeeee;
-  font-weight: 550;
-}
-.navbtn {
+
+.auth {
   /* border: 10px solid red; */
   display: flex;
   justify-content: flex-end;
-  margin-right: 3rem;
-  gap: 1rem;
-}
-
-.logo {
-  font-weight: bold;
-}
-
-.food-img {
-  width: 100%;
-  height: auto;
-}
-/* --------------장바구니------------------ */
-.title-cart {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 3rem;
-}
-
-.cart-item {
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 1px solid gray;
-  line-height: 0px;
-}
-.item1 {
-  flex-grow: 2;
-  font-size: 1.2rem;
-  font-weight: 550;
-  padding-left: 180px;
-}
-.item2 {
-  flex-grow: 2;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-.item3 {
-  display: flex;
-  gap: 1rem;
-  flex-grow: 1;
   align-items: center;
-
-  button {
-    background-color: black;
+  gap: 1rem;
+  > p {
+    font-size: 2rem;
+  }
+  > button {
+    height: 2.5rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #171717;
     color: white;
-    &:hover {
-      cursor: pointer;
-      background-color: #153448;
-    }
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
   }
 }
-.item4 {
-  flex-grow: 0.5;
-  button {
-    background-color: black;
-    color: white;
-    &:hover {
-      cursor: pointer;
-      background-color: #153448;
-    }
-  }
-}
-/* -------------------------------- */
 
-.list-bg {
-  background: rgb(249, 250, 255);
-  padding: 10px;
-}
-.list-item {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 5px;
-  box-shadow: rgb(224, 224, 224) 0px 2px 4px 0px;
-}
-.list-bg h2 {
-  font-size: 40px;
-  color: gray;
-}
-.list-item h4 {
-  font-size: 20px;
-  font-weight: 800;
-  margin: 0;
-  color: black;
-}
-.list-item a {
-  text-decoration: none;
-}
-.list-item p {
-  color: gray;
-  margin: 5px 0px;
+/* ----------------가운데부분------------------------------------------ */
+.mainpart {
+  border: 10px solid red;
+  height: 82vh;
+  width: 100vw;
 }
 
-.p-20 {
-  padding: 20px;
-}
-input {
-  box-sizing: border-box;
-  padding: 10px;
-  display: block;
-  margin-bottom: 10px;
-}
-button {
-  padding: 10px 15px;
-  background: lightgray;
-  border: none;
-  border-radius: 5px;
-}
+/* --------------------------------- */
 
-a {
-  text-decoration: none;
-}
-
-.list-item {
-  opacity: 1;
-  transition: all 1s;
-}
-
-.footer {
+/* ----------------footer---------------------------------------- */
+.footerpart {
+  /* border: 10px solid blue; */
   background: #eeeeee;
   color: #171717;
   font-weight: 550;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 4%;
+  height: 5vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* position: fixed;
+     bottom: 0; */
 }
 
-.loginPL a {
-  text-decoration: none;
-  color: white;
-}
+/* ---------------------------------- */
+
 /* --------------로딩화면------------------ */
 .load {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body {
-  margin: 0;
-  background: #171717;
-  color: #eeeeee;
-  box-sizing: border-box;
-}
-/* ----------------top슬라이드부분------------ */
-.main-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-.main-top {
-  display: flex;
-  justify-content: center;
-  margin-top: 6rem;
-}
-.slide-container {
-  width: 900px;
-  display: flex;
-  overflow: hidden;
-}
-
-.slide-box img {
-  width: 900px;
-  height: 550px;
-  /* transform: translate(-700px); */
-}
-
-/* ---------------------------------------- */
-.main-middle {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 80%;
-  gap: 3rem;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-  > img {
-    height: 40rem;
-  }
-}
-.main-bottom {
-  display: flex;
-  justify-content: center;
-  > img {
-    height: 35rem;
-  }
-}
-
-.head-design1 {
-  /* border: 5px solid red; */
-}
-.head-memberInfo {
-  color: blue;
-  line-height: 250%;
-}
-.title {
-  text-align: center;
-  margin-top: 50px;
-}
-.title-sub {
-  text-align: center;
-}
-.food {
-  margin: 20px auto;
-  width: 200px;
-  background: white;
-  color: black;
-  padding: 20px;
-  border-radius: 5px;
-  position: relative;
-}
-.merchandise {
-  display: flex;
-  flex-direction: row;
-}
-.list-left {
-  /* border: 10px solid blue; */
-  width: 20%;
-  margin-left: 20px;
-  margin-right: 20px;
-
-  li {
-    padding-top: 20px;
-    padding-left: 20px;
-    font-size: 1.5rem;
-  }
-  li:hover {
-    cursor: pointer;
-    color: #337357;
-  }
-}
-.list-right {
-  /* border: 10px solid red; */
-  width: 80%;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.goods {
-  /* border: 10px solid black; */
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px;
-}
-
-.navbar {
-  /* background: #00224d; */
-  /* background-color: #222831; */
-  background: #eeeeee;
-  padding: 20px;
-  color: #171717;
-  width: 100%;
-}
-.navbar a {
-  margin-right: 10px;
-  text-decoration: none;
-  color: #171717;
-}
-.navbar button {
-  background-color: #171717;
-  color: #eeeeee;
-  font-weight: 550;
-}
-.navbtn {
-  /* border: 10px solid red; */
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 3rem;
-  gap: 1rem;
-}
-
-.logo {
-  font-weight: bold;
-}
-
-.food-img {
-  width: 100%;
-  height: auto;
-}
-/* --------------장바구니------------------ */
-.title-cart {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 3rem;
-}
-
-.cart-item {
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 1px solid gray;
-  line-height: 0px;
-}
-.item1 {
-  flex-grow: 2;
-  font-size: 1.2rem;
-  font-weight: 550;
-  padding-left: 180px;
-}
-.item2 {
-  flex-grow: 2;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-.item3 {
-  display: flex;
-  gap: 1rem;
-  flex-grow: 1;
-  align-items: center;
-
-  button {
-    background-color: black;
-    color: white;
-    &:hover {
-      cursor: pointer;
-      background-color: #153448;
-    }
-  }
-}
-.item4 {
-  flex-grow: 0.5;
-  button {
-    background-color: black;
-    color: white;
-    &:hover {
-      cursor: pointer;
-      background-color: #153448;
-    }
-  }
-}
-/* -------------------------------- */
-
-.list-bg {
-  background: rgb(249, 250, 255);
-  padding: 10px;
-}
-.list-item {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 5px;
-  box-shadow: rgb(224, 224, 224) 0px 2px 4px 0px;
-}
-.list-bg h2 {
-  font-size: 40px;
-  color: gray;
-}
-.list-item h4 {
-  font-size: 20px;
-  font-weight: 800;
-  margin: 0;
-  color: black;
-}
-.list-item a {
-  text-decoration: none;
-}
-.list-item p {
-  color: gray;
-  margin: 5px 0px;
-}
-
-.p-20 {
-  padding: 20px;
-}
-input {
-  box-sizing: border-box;
-  padding: 10px;
-  display: block;
-  margin-bottom: 10px;
-}
-button {
-  padding: 10px 15px;
-  background: lightgray;
-  border: none;
-  border-radius: 5px;
-}
-
-a {
-  text-decoration: none;
-}
-
-.list-item {
-  opacity: 1;
-  transition: all 1s;
-}
-
-.footer {
-  background: #eeeeee;
-  color: #171717;
-  font-weight: 550;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 4%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loginPL a {
-  text-decoration: none;
-  color: white;
-}
-/* --------------로딩화면------------------ */
-.load {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* -------------------------------------------- */

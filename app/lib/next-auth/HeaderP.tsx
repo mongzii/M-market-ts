@@ -8,20 +8,16 @@ export default function HeaderP() {
   //console.log(status);
   return (
     <div>
-      {/* <h2>{session?.user?.name}</h2> */}
-      {/* <h2>
-        {status === "authenticated" ? <p>안녕하세요</p> : <p>로그인하세요</p>}
-      </h2> */}
       <h2>
         {status === "loading" ? (
           <p>Loading</p>
         ) : status === "authenticated" ? (
-          <div>
+          <div className="auth">
             <p>{session?.user?.name}님</p>
             <LogoutBtn />
           </div>
         ) : (
-          <div>
+          <div className="auth">
             <LoginBtn />
           </div>
         )}

@@ -5,6 +5,8 @@ import Link from "next/link";
 import AuthProvider from "./lib/next-auth";
 import HeaderBtn from "./HeaderBtn";
 import ReduxProvider from "../redux/provider";
+import HeaderPart from "./HeaderPart";
+import FooterPart from "./FooterPart";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,21 +24,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ReduxProvider>
-          <div className="navbar">
-            <Link href="/" className="logo">
-              Home
-            </Link>
-
-            <Link href="/list">List</Link>
-            <Link href="/cart">Cart</Link>
-
-            <Link href="/board">Q&A</Link>
-            <HeaderBtn />
+          <HeaderPart />
+          <div className="mainpart">
+            <AuthProvider>{children}</AuthProvider>
           </div>
-          <AuthProvider>{children}</AuthProvider>
-
-          <div className="footer">Copyright 2024 by Moon</div>
         </ReduxProvider>
+        <FooterPart />
       </body>
     </html>
   );
