@@ -32,7 +32,7 @@ export default function Slide() {
             <div
               className="slide-box"
               key={i}
-              style={{ transform: `translateX(-${index * 900}px)` }}
+              style={{ transform: `translateX(-${index * 20}rem)` }}
             >
               <img src={image} alt={`Slide ${i + 1}`} />
             </div>

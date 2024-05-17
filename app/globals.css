@@ -1,7 +1,7 @@
 body {
   margin: 0;
   /* background: #171717; */
-  background: pink;
+  background: gray;
   color: #eeeeee;
   box-sizing: border-box;
 }
@@ -68,10 +68,122 @@ body {
 }
 
 /* ----------------가운데부분------------------------------------------ */
+.main {
+  /* border: 10px solid red; */
+}
 .mainpart {
-  border: 10px solid red;
+  /* border: 10px solid red; */
   height: 82vh;
   width: 100vw;
+}
+.main-body {
+  /* border: 10px solid black; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60vh;
+  /* height: 25vh;
+  height: 100%; */
+}
+.title {
+  display: flex;
+  justify-content: center;
+}
+.main-top {
+  /* border: 10px solid blue; */
+}
+.slide-container {
+  /* border: 10px solid red; */
+  /* width: 35%; */
+  /* width: 60rem; */
+  width: 50vw;
+  display: flex;
+  overflow: hidden;
+  /* @media screen and (max-width: 1023px) {
+    width: 40rem;
+  }
+  @media screen and (max-width: 767px) {
+    width: 20rem;
+  } */
+}
+.slide-box {
+  > img {
+    width: 50vw;
+    height: 50vh;
+    /* 여기서 슬라이더 넘길때마다 바뀌는거 계산해서 수정해야한다 */
+    /* @media screen and (max-width: 1023px) {
+      width: 40rem;
+      height: 23rem;
+    }
+    @media screen and (max-width: 767px) {
+      width: 20rem;
+      height: 13rem;
+    } */
+  }
+}
+
+.main-middle {
+  /* border: 10px solid green; */
+  height: 50vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.middle1 {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5rem;
+  > img {
+    width: 20vw;
+    height: 35vh;
+    @media screen and (max-width: 1023px) {
+      width: 20vw;
+      height: 35vh;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 25vw;
+      height: 30vh;
+    }
+  }
+}
+.middle2 {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  > img {
+    width: 20vw;
+    height: 35vh;
+    @media screen and (max-width: 1023px) {
+      width: 20vw;
+      height: 35vh;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 25vw;
+      height: 30vh;
+    }
+  }
+}
+.middle3 {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5rem;
+  padding-bottom: 4rem;
+  > img {
+    width: 20vw;
+    height: 35vh;
+    @media screen and (max-width: 1023px) {
+      width: 20vw;
+      height: 35vh;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 25vw;
+      height: 30vh;
+    }
+  }
 }
 
 /* --------------------------------- */
@@ -87,8 +199,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: fixed;
-     bottom: 0; */
+  position: fixed;
+  bottom: 0;
 }
 
 /* ---------------------------------- */
@@ -99,4 +211,114 @@ body {
   justify-content: center;
   align-items: center;
 }
+/* -------------------------------------------- */
+/* -----------------list페이지--------------------------- */
+.merchandise {
+  border: 5px solid black;
+  display: flex;
+  flex-direction: row;
+}
+/* list페이지왼쪽 */
+.list-left {
+  /* border: 5px solid red; */
+  width: 20vw;
+  padding-left: 2rem;
+  padding-bottom: 4rem;
+}
+.category {
+  /* border: 5px solid red; */
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  @media screen and (max-width: 1023px) {
+    font-size: 1.2rem;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 1rem;
+  }
+  > li {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-left: 0.8rem;
+  }
+  > li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+  }
+  > li:hover {
+    cursor: pointer;
+    color: #337357;
+  }
+}
+/* list페이지오른쪽 */
+.list-right {
+  /* border: 5px solid blue; */
+  width: 80vw;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 4rem;
+}
+.goods {
+  display: flex;
+  flex-wrap: wrap;
+}
+.good {
+  border: 5px solid red;
+  width: 10vw;
+  height: 40vh;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  @media screen and (max-width: 1023px) {
+    width: 20vw;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 40vw;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+.good-img {
+  width: 130%;
+  height: 20vh;
+  @media screen and (max-width: 1023px) {
+    width: 110%;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+}
+//이쪽 반응형페이지들 정리하고있었음
+.good-info {
+  border: 5px solid blue;
+  /* height: 15vh; */
+  /* height: 10vh; */
+  /* height: 50%; */
+
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  > button {
+    width: 8vw;
+    @media screen and (max-width: 1023px) {
+      width: 10vw;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 20vw;
+    }
+  }
+}
+
 /* -------------------------------------------- */

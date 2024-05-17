@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 export default function ListLeft() {
   let router = useRouter();
   return (
-    <div>
+    <div className="category">
       <li
         onClick={() => {
           router.push("/list");

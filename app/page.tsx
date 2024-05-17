@@ -7,13 +7,18 @@ export default async function Home() {
     <div className="mainbody">
       <h1 className="title">M-market</h1>
       <div className="main">
-        {/* <Slide /> */}
+        <Slide />
         <div className="main-middle">
-          {/* <img src="/mainbt2.jpg" />
-          <img src="/mainbt3.jpg" />
-          <img src="/mainbt5.jpg" /> */}
+          <div className="middle1">
+            <img src="/mainbt2.jpg" />
+          </div>
+          <div className="middle2">
+            <img src="/mainbt3.jpg" />
+          </div>
+          <div className="middle3">
+            <img src="/mainbt5.jpg" />
+          </div>
         </div>
-        <div className="main-bottom">{/* <img src="/mainbt4.jpg" /> */}</div>
       </div>
     </div>
   );
