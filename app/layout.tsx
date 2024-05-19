@@ -23,8 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <HeaderPart />
         <ReduxProvider>
-          <HeaderPart />
           <div className="mainpart">
             <AuthProvider>{children}</AuthProvider>
           </div>
