@@ -21,7 +21,7 @@ export default function List() {
   };
   //console.log(productData);
   return (
-    <div className="list-main">
+    <div>
       <h2 className="title">상품목록</h2>
       <div className="merchandise">
         <div className="list-left">
@@ -34,8 +34,8 @@ export default function List() {
                 <div className="good" key={i}>
                   <img src={`/jacket${i + 1}.png`} className="good-img" />
                   <div className="good-info">
-                    <p>{productData.jacket[i].product}</p>
-                    <p>{productData.jacket[i].price}원</p>
+                    <span>{productData.jacket[i].product}</span>
+                    <span>{productData.jacket[i].price}원</span>
                     <button
                       onClick={() =>
                         handleClick(a.id, a.product, a.price, a.count)
@@ -52,8 +52,8 @@ export default function List() {
                 <div className="good" key={i}>
                   <img src={`/shoe${i + 1}.png`} className="good-img" />
                   <div className="good-info">
-                    <p>{productData.shoe[i].product}</p>
-                    <p>{productData.shoe[i].price}원</p>
+                    <span>{productData.shoe[i].product}</span>
+                    <span>{productData.shoe[i].price}원</span>
                     <button
                       onClick={() =>
                         handleClick(a.id, a.product, a.price, a.count)

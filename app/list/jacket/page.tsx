@@ -30,17 +30,19 @@ export default function JacketPage() {
           <div className="goods">
             {productData.jacket.map((a, i) => {
               return (
-                <div className="food" key={i}>
-                  <img src={`/jacket${i + 1}.png`} className="food-img" />
-                  <h4>{productData.jacket[i].product}</h4>
-                  <h4>{productData.jacket[i].price}원</h4>
-                  <button
-                    onClick={() =>
-                      handleClick(a.id, a.product, a.price, a.count)
-                    }
-                  >
-                    장바구니
-                  </button>
+                <div className="good" key={i}>
+                  <img src={`/jacket${i + 1}.png`} className="good-img" />
+                  <div className="good-info">
+                    <span>{productData.jacket[i].product}</span>
+                    <span>{productData.jacket[i].price}원</span>
+                    <button
+                      onClick={() =>
+                        handleClick(a.id, a.product, a.price, a.count)
+                      }
+                    >
+                      장바구니
+                    </button>
+                  </div>
                 </div>
               );
             })}
