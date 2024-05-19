@@ -21,7 +21,7 @@ export default function List() {
   };
   //console.log(productData);
   return (
-    <div>
+    <div className="list-main">
       <h2 className="title">상품목록</h2>
       <div className="merchandise">
         <div className="list-left">
