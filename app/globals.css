@@ -533,3 +533,28 @@ body {
     }
   }
 }
+
+/* --------------------회원가입------------------------ */
+.member-body {
+  /* border: 5px solid black; */
+  padding-top: 5rem;
+  /* height: 100vh; */
+}
+.member-title {
+  /* border: 5px solid red; */
+  display: flex;
+  justify-content: center;
+}
+.member-main {
+  /* border: 5px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  > button {
+    background-color: black;
+    color: white;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+  }
+}
