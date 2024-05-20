@@ -21,7 +21,7 @@ export default async function Qa() {
     .toArray();
 
   return (
-    <div className="list-bg">
+    <div className="qa-bg">
       <BoardItem data={data} />
       {/* <BoardItem /> */}
       {/* <DetailLink /> */}

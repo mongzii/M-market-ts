@@ -7,8 +7,9 @@ import axios from "axios";
 
 export default function BoardItem({ data }: BoardProps) {
   return (
-    <div>
+    <div className="test1">
       <h2>Q & A</h2>
+      <WriteBtn />
       {data.map((a, i) => {
         return (
           <div className="list-item" key={i}>
@@ -16,30 +17,31 @@ export default function BoardItem({ data }: BoardProps) {
               <h4> {data[i].title}</h4>
             </Link>
             <p>{data[i].content}</p>
-            <Link href={`/board/edit/` + data[i]._id}>수정</Link>
-            <button
-              onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
-                axios
-                  .delete("/api/post/delete", {
-                    data: data[i]._id,
-                  })
-                  .then(() => {
-                    const parentElement = e.currentTarget
-                      .parentElement as HTMLElement;
-                    parentElement.style.opacity = "0";
-                    setTimeout(() => {
-                      parentElement.style.display = "none";
-                    }, 1000);
-                  })
-                  .catch(err => console.error(err));
-              }}
-            >
-              삭제
-            </button>
+            <div className="test2">
+              <Link href={`/board/edit/` + data[i]._id}>수정</Link>
+              <button
+                onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
+                  axios
+                    .delete("/api/post/delete", {
+                      data: data[i]._id,
+                    })
+                    .then(() => {
+                      const parentElement = e.currentTarget
+                        .parentElement as HTMLElement;
+                      parentElement.style.opacity = "0";
+                      setTimeout(() => {
+                        parentElement.style.display = "none";
+                      }, 1000);
+                    })
+                    .catch(err => console.error(err));
+                }}
+              >
+                삭제
+              </button>
+            </div>
           </div>
         );
       })}
-      <WriteBtn />
     </div>
   );
 }
