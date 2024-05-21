@@ -26,34 +26,41 @@ export default function Comment({ _id }: IeditId) {
 
   //console.log(list);
   return (
-    <div>
+    <div className="comment-body">
       <hr />
-      <h2>댓글</h2>
-
-      {list.length > 0
-        ? list.map((a, i) => {
-            return (
-              <div key={i}>
-                <p>{a.content}</p>
-              </div>
-            );
-          })
-        : "댓글이 없습니다"}
-      <input
-        onChange={e => {
-          setComment(e.target.value);
-        }}
-      />
-      <button
-        onClick={() => {
-          fetch("/api/comment/new", {
-            method: "POST",
-            body: JSON.stringify({ comment: comment, _id: _id }),
-          });
-        }}
-      >
-        댓글전송
-      </button>
+      <div className="comment-main">
+        <h1>댓글</h1>
+        <div className="comment-list">
+          {list.length > 0 ? (
+            list.map((a, i) => {
+              return (
+                <div key={i}>
+                  <p>{a.content}</p>
+                </div>
+              );
+            })
+          ) : (
+            <p>댓글이 없습니다</p>
+          )}
+        </div>
+        <div className="comment-write">
+          <input
+            onChange={e => {
+              setComment(e.target.value);
+            }}
+          />
+          <button
+            onClick={() => {
+              fetch("/api/comment/new", {
+                method: "POST",
+                body: JSON.stringify({ comment: comment, _id: _id }),
+              });
+            }}
+          >
+            댓글전송
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

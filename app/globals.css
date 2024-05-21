@@ -575,7 +575,7 @@ body {
     border-radius: 0.5rem;
   }
 }
-.test1 {
+.board-body {
   /* border: 5px solid red; */
   width: 50%;
   height: 50%;
@@ -583,7 +583,6 @@ body {
   color: black;
 }
 .list-item {
-  /* border: 5px solid blue; */
   border-bottom: 1px solid black;
   padding: 0.5rem;
   /* padding: 1rem; */
@@ -592,14 +591,9 @@ body {
     text-decoration: none;
     color: black;
   }
-  :nth-child(3) {
-    /* color: red; */
-    /* border: 1px solid red; */
-  }
 }
 
-.test2 {
-  /* border: 5px solid red; */
+.board-btn {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
@@ -611,5 +605,87 @@ body {
     background: black;
     color: white;
     border-radius: 0.5rem;
+    &:hover {
+      cursor: pointer;
+      background-color: #153448;
+    }
+  }
+}
+/* --------------------QA write, edit------------------------ */
+.qa-write {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.qa-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20vw;
+
+  > input {
+    width: 25vw;
+  }
+  > button {
+    background: black;
+    color: white;
+    border-radius: 0.5rem;
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+      background-color: #153448;
+    }
+  }
+}
+
+/* --------------------QA write detail------------------------ */
+.detail-body {
+  width: 100%;
+  height: 100%;
+  > h1 {
+    padding-left: 1rem;
+  }
+}
+.detail-main {
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  :nth-child(1) {
+    flex-grow: 1;
+  }
+  :nth-child(2) {
+    flex-grow: 4;
+  }
+}
+
+/* --------------------comment------------------------ */
+.comment-main {
+  padding-top: 3rem;
+  > h1 {
+    padding-left: 1rem;
+  }
+}
+.comment-list {
+  text-align: center;
+}
+.comment-write {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+  padding-bottom: 3rem;
+  > button {
+    background: black;
+    color: white;
+    border-radius: 0.5rem;
+    &:hover {
+      cursor: pointer;
+      background-color: #153448;
+    }
   }
 }

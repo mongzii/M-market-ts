@@ -25,12 +25,16 @@ export default async function Detail(props: any) {
   //console.log(props.params.id);
 
   return (
-    <div>
-      <h2>상세페이지</h2>
-      {/* <h4>글제목</h4>
-      <p>글내용</p> */}
-      <h4>{result?.title}</h4>
-      <p>{result?.content}</p>
+    <div className="detail-body">
+      <h1>상세페이지</h1>
+      <div className="detail-main">
+        <div>제목</div>
+        <h3>{result?.title}</h3>
+      </div>
+      <div className="detail-main">
+        <div>내용</div>
+        <h3>{result?.content}</h3>
+      </div>
       <Comment _id={_id} />
     </div>
   );

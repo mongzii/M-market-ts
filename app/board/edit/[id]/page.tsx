@@ -26,9 +26,9 @@ export default async function Edit(props: any) {
     .findOne({ _id: new ObjectId(props.params.id) });
 
   return (
-    <div className="p-20">
+    <div className="qa-write">
       <h4>수정페이지</h4>
-      <form action="/api/post/edit" method="POST">
+      <form action="/api/post/edit" method="POST" className="qa-form">
         <input name="title" defaultValue={result?.title} />
         <input name="content" defaultValue={result?.content} />
         <input
@@ -36,7 +36,7 @@ export default async function Edit(props: any) {
           name="_id"
           defaultValue={result?._id.toString()}
         />
-        <button type="submit">전송</button>
+        <button type="submit">수정</button>
       </form>
     </div>
   );
