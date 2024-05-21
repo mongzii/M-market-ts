@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: #171717;
-  color: #eeeeee;
+  color: #f8f7f4;
   box-sizing: border-box;
 }
 /* ----------------footer---------------------------------------- */
@@ -61,7 +61,7 @@ body {
     font-size: 1.8rem;
     font-weight: 650;
     text-decoration: none;
-    color: black;
+    color: #171717;
     @media screen and (max-width: 1023px) {
       font-size: 1rem;
     }
@@ -70,6 +70,7 @@ body {
     }
     &:hover {
       cursor: pointer;
+      /* 이거 색 잘안보여서 다시 정하기 */
       color: #2c3333;
     }
   }
@@ -188,7 +189,6 @@ body {
       width: 20vw;
       height: 35vh;
     }
-
     @media screen and (max-width: 767px) {
       width: 25vw;
       height: 30vh;
@@ -206,7 +206,6 @@ body {
       width: 20vw;
       height: 35vh;
     }
-
     @media screen and (max-width: 767px) {
       width: 25vw;
       height: 30vh;
@@ -226,7 +225,6 @@ body {
       width: 20vw;
       height: 35vh;
     }
-
     @media screen and (max-width: 767px) {
       width: 25vw;
       height: 30vh;
@@ -365,7 +363,6 @@ body {
     width: 100%;
     gap: 1rem;
   }
-
   @media screen and (max-width: 480px) {
     width: 100%;
     gap: 0.5rem;
@@ -428,7 +425,6 @@ body {
       border-radius: 0.7rem;
       letter-spacing: 0.2rem;
     }
-
     @media screen and (max-width: 480px) {
       width: 28vw;
       height: 2rem;
