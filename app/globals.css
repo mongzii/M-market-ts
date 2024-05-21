@@ -519,17 +519,16 @@ body {
       background-color: #153448;
     }
 
-    @media screen and (max-width: 1023px) {
+    /* @media screen and (max-width: 1023px) {
       height: 2rem;
-      width: 3.5rem;
+      
     }
     @media screen and (max-width: 860px) {
       height: 2rem;
-      width: 3.5rem;
-    }
+
+    } */
     @media screen and (max-width: 480px) {
       height: 1.5rem;
-      width: 3rem;
     }
   }
 }
