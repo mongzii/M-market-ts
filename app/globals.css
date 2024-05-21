@@ -132,6 +132,7 @@ body {
   /* width: 35%; */
   /* width: 60rem; */
   width: 50vw;
+
   display: flex;
   overflow: hidden;
   /* @media screen and (max-width: 1023px) {
@@ -144,7 +145,11 @@ body {
 .slide-box {
   > img {
     width: 50vw;
-    height: 50vh;
+    height: 55vh;
+    @media screen and (max-width: 899px) {
+      width: 50vw;
+      height: 30vh;
+    }
     /* 여기서 슬라이더 넘길때마다 바뀌는거 계산해서 수정해야한다 */
     /* @media screen and (max-width: 1023px) {
       width: 40rem;
