@@ -150,15 +150,6 @@ body {
       width: 50vw;
       height: 30vh;
     }
-    /* 여기서 슬라이더 넘길때마다 바뀌는거 계산해서 수정해야한다 */
-    /* @media screen and (max-width: 1023px) {
-      width: 40rem;
-      height: 23rem;
-    }
-    @media screen and (max-width: 767px) {
-      width: 20rem;
-      height: 13rem;
-    } */
   }
 }
 
