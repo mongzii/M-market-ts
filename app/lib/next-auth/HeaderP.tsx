@@ -1,6 +1,7 @@
 "use client";
 import LoginBtn from "@/app/LoginBtn";
 import LogoutBtn from "@/app/LogoutBtn";
+import SignupBtn from "@/app/SignupBtn";
 import { useSession } from "next-auth/react";
 
 export default function HeaderP() {
@@ -19,6 +20,7 @@ export default function HeaderP() {
         ) : (
           <div className="auth">
             <LoginBtn />
+            <SignupBtn />
           </div>
         )}
       </h2>
