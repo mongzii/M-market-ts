@@ -22,13 +22,14 @@ export default async function handle(req: any, res: any) {
     //저게 있으면 중복가입은 안됩니다라고 나오게
     if (!emailsearch) {
       //해시함수
-      let hash = await bcrypt.hash(req.body.password, 10);
-      //console.log(hash)
-      req.body.password = hash;
+      // let hash = await bcrypt.hash(req.body.password, 10);
+      // //console.log(hash)
+      // req.body.password = hash;
       const client = await connectDB;
       const db = client.db("market");
       await db.collection("user_cred").insertOne(req.body);
       res.redirect(302, "/");
+      console.log(req.body);
     } else {
       return res.status(500).json("중복가입은 안됩니다!!!!");
     }
