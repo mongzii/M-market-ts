@@ -26,12 +26,23 @@ export const authOptions: NextAuthOptions = {
         //console.log(user);
         //console.log(credentials);
         //입력한게 db에 있는거랑 같으면 db에 있는걸로 리턴해라
-        if (credentials?.email === me?.email) {
+        // if (credentials?.email === me?.email) {
+        //   return me?.email;
+        // } else {
+        //   return null;
+        // }
+        //비밀번호도 체크하는부분 구현해야함!!!!!
+        //email이랑 비번 같으면  return me?.email;, 둘중 하나 같지 않으면 return null;
+        if (
+          credentials?.email === me?.email &&
+          credentials?.password === me?.password
+        ) {
           return me?.email;
         } else {
-          return null;
+          credentials?.email !== me?.email ||
+            credentials?.password !== me?.password;
         }
-        //비밀번호도 체크하는부분 구현해야함!!!!!
+        return null;
       },
     }),
   ],
