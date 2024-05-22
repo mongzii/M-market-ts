@@ -29,7 +29,7 @@ export default async function handle(req: any, res: any) {
       const db = client.db("market");
       await db.collection("user_cred").insertOne(req.body);
       res.redirect(302, "/");
-      console.log(req.body);
+      //console.log(req.body);
     } else {
       return res.status(500).json("중복가입은 안됩니다!!!!");
     }
