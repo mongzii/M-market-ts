@@ -32,7 +32,7 @@ export default function Item() {
   };
 
   return (
-    <div className="test1">
+    <div>
       <h2 className="title-cart">장바구니</h2>
       {Item.map((el, i) => {
         return (

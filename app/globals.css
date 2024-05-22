@@ -5,14 +5,9 @@ body {
   color: #f8f7f4;
   box-sizing: border-box;
 }
-/* ----------------footer---------------------------------------- */
+/* ----------------footer--------------------------------- */
 .footerpart {
-  /* border: 10px solid blue; */
-  /* background: #eeeeee; */
-  /* background: #f1faff; */
-  /* background: #fbfff4; */
   background: #f8f7f4;
-  /* background: #feeceb; */
   color: #171717;
   font-weight: 600;
   word-spacing: 0.4rem;
@@ -25,13 +20,9 @@ body {
   bottom: 0;
 }
 
-/* -----------------헤더---------------------------------------- */
+/* -----------------헤더---------------------------------- */
 .headerpart {
-  /* border: 5px solid black; */
-  /* background: #f1faff; */
-  /* background: #fbfff4; */
   background: #f8f7f4;
-  /* background: #feeceb; */
   color: #171717;
   width: 100%;
   height: 14vh;
@@ -48,7 +39,6 @@ body {
   }
 }
 .navmenu {
-  /* border: 5px solid red; */
   width: 100%;
   height: 7vh;
   display: flex;
@@ -65,20 +55,15 @@ body {
     @media screen and (max-width: 1023px) {
       font-size: 1rem;
     }
-    @media screen and (max-width: 767px) {
-      font-size: 1rem;
-    }
+
     &:hover {
       cursor: pointer;
-      /* 이거 색 잘안보여서 다시 정하기 */
-      color: #2c3333;
+      color: #83142c;
     }
   }
 }
 
 .auth {
-  /* color: red;
-  border: 5px solid blue; */
   max-height: 7vh;
   width: 100%;
   display: flex;
@@ -93,6 +78,7 @@ body {
   @media screen and (max-width: 767px) {
     margin-top: -3vh;
   }
+
   > p {
     font-size: 2rem;
     @media screen and (max-width: 767px) {
@@ -118,23 +104,17 @@ body {
 }
 
 /* ----------------가운데부분------------------------------------------ */
-
 .mainpart {
-  /* border: 10px solid red; */
   position: relative;
   top: 15vh;
   height: 82vh;
   width: 100vw;
 }
 .main-body {
-  /* border: 10px solid black; */
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 60vh;
-
-  /* height: 25vh;
-  height: 100%; */
 }
 .title {
   display: flex;
@@ -142,23 +122,10 @@ body {
   color: #f8f7f4;
   letter-spacing: 0.2rem;
 }
-.main-top {
-  /* border: 10px solid blue; */
-}
 .slide-container {
-  /* border: 10px solid red; */
-  /* width: 35%; */
-  /* width: 60rem; */
   width: 50vw;
-
   display: flex;
   overflow: hidden;
-  /* @media screen and (max-width: 1023px) {
-    width: 40rem;
-  }
-  @media screen and (max-width: 767px) {
-    width: 20rem;
-  } */
 }
 .slide-box {
   > img {
@@ -172,13 +139,11 @@ body {
 }
 
 .main-middle {
-  /* border: 10px solid green; */
   height: 50vh;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 .middle1 {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: flex-start;
   padding-left: 5rem;
@@ -196,7 +161,6 @@ body {
   }
 }
 .middle2 {
-  /* border: 1px solid blue; */
   display: flex;
   justify-content: center;
   > img {
@@ -213,7 +177,6 @@ body {
   }
 }
 .middle3 {
-  /* border: 1px solid black; */
   display: flex;
   justify-content: flex-end;
   padding-right: 5rem;
@@ -232,32 +195,26 @@ body {
   }
 }
 
-/* --------------------------------- */
-
 /* --------------로딩화면------------------ */
 .load {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* -------------------------------------------- */
 /* -----------------list페이지--------------------------- */
 
 .merchandise {
-  /* border: 5px solid black; */
   display: flex;
   flex-direction: row;
 }
 /* list페이지왼쪽 */
 .list-left {
-  /* border: 5px solid black; */
   width: 20vw;
   padding-left: 2rem;
   padding-bottom: 4rem;
   position: fixed;
 }
 .category {
-  /* border: 5px solid red; */
   height: 20vh;
   display: flex;
   flex-direction: column;
@@ -278,12 +235,10 @@ body {
   > li:hover {
     cursor: pointer;
     color: #83142c;
-    /* color: #337357; */
   }
 }
 /* list페이지오른쪽 */
 .list-right {
-  /* border: 5px solid black; */
   position: relative;
   margin-left: 20vw;
   padding-left: 5rem;
@@ -294,7 +249,6 @@ body {
   flex-wrap: wrap;
 }
 .good {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   width: 16vw;
@@ -335,10 +289,6 @@ body {
     width: 120%;
     height: 60%;
   }
-  /* @media screen and (max-width: 767px) {
-    width: 110%;
-    height: 60%;
-  } */
   @media screen and (max-width: 480px) {
     width: 110%;
     height: 60%;
@@ -346,7 +296,6 @@ body {
 }
 
 .good-info {
-  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   align-content: flex-start;
@@ -356,10 +305,6 @@ body {
   gap: 1rem;
 
   @media screen and (max-width: 1023px) {
-    width: 100%;
-    gap: 1rem;
-  }
-  @media screen and (max-width: 860px) {
     width: 100%;
     gap: 1rem;
   }
@@ -374,10 +319,6 @@ body {
     font-size: 1.4rem;
     padding-top: 0.5rem;
     @media screen and (max-width: 1023px) {
-      font-size: 1.3rem;
-      padding-top: 0.5rem;
-    }
-    @media screen and (max-width: 860px) {
       font-size: 1.3rem;
       padding-top: 0.5rem;
     }
@@ -436,15 +377,11 @@ body {
 }
 
 /* --------------------장바구니------------------------ */
-.test1 {
-  /* border: 5px solid black; */
-}
+
 .title-cart {
-  /* border: 5px solid red; */
   text-align: center;
 }
 .cart-item {
-  /* border: 5px solid blue; */
   display: flex;
   justify-content: space-around;
 }
@@ -457,10 +394,7 @@ body {
     padding-left: 2.5rem;
     font-size: 1.5rem;
   }
-  @media screen and (max-width: 860px) {
-    padding-left: 2.5rem;
-    font-size: 1.5rem;
-  }
+
   @media screen and (max-width: 480px) {
     padding-left: 1.5rem;
     font-size: 1rem;
@@ -474,9 +408,6 @@ body {
   font-size: 1.2rem;
 
   @media screen and (max-width: 1023px) {
-    font-size: 1.2rem;
-  }
-  @media screen and (max-width: 860px) {
     font-size: 1.2rem;
   }
   @media screen and (max-width: 480px) {
@@ -499,13 +430,8 @@ body {
     width: 2rem;
     &:hover {
       cursor: pointer;
-      /* background-color: #153448; */
     }
     @media screen and (max-width: 1023px) {
-      height: 2rem;
-      width: 2rem;
-    }
-    @media screen and (max-width: 860px) {
       height: 2rem;
       width: 2rem;
     }
@@ -533,17 +459,8 @@ body {
     width: 3.5rem;
     &:hover {
       cursor: pointer;
-      /* background-color: #153448; */
     }
 
-    /* @media screen and (max-width: 1023px) {
-      height: 2rem;
-      
-    }
-    @media screen and (max-width: 860px) {
-      height: 2rem;
-
-    } */
     @media screen and (max-width: 480px) {
       height: 1.5rem;
     }
@@ -552,17 +469,13 @@ body {
 
 /* --------------------회원가입------------------------ */
 .member-body {
-  /* border: 5px solid black; */
   padding-top: 5rem;
-  /* height: 100vh; */
 }
 .member-title {
-  /* border: 5px solid red; */
   display: flex;
   justify-content: center;
 }
 .member-main {
-  /* border: 5px solid blue; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -575,13 +488,11 @@ body {
     margin-top: 2rem;
     &:hover {
       cursor: pointer;
-      /* background-color: #153448; */
     }
   }
 }
 /* --------------------Q&A---------------------- */
 .qa-bg {
-  /* border: 5px solid black; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -597,12 +508,10 @@ body {
     border-radius: 0.5rem;
     &:hover {
       cursor: pointer;
-      /* background-color: #153448; */
     }
   }
 }
 .board-body {
-  /* border: 5px solid red; */
   width: 50%;
   height: 50%;
   padding-bottom: 5rem;
@@ -611,7 +520,6 @@ body {
 .list-item {
   border-bottom: 1px solid #f8f7f4;
   padding: 0.5rem;
-  /* padding: 1rem; */
 
   > a {
     text-decoration: none;
@@ -634,7 +542,6 @@ body {
     border-radius: 0.5rem;
     &:hover {
       cursor: pointer;
-      /* background-color: #153448; */
     }
   }
 }
@@ -664,7 +571,6 @@ body {
     width: 100%;
     &:hover {
       cursor: pointer;
-      /* background-color: #153448; */
     }
   }
 }
@@ -714,7 +620,6 @@ body {
     border-radius: 0.5rem;
     &:hover {
       cursor: pointer;
-      /* background-color: #153448; */
     }
   }
 }

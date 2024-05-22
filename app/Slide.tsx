@@ -26,7 +26,7 @@ export default function Slide() {
   return (
     <div className="main-body">
       <BiCaretLeftCircle size="60" onClick={movePrev} />
-      <div className="main-top">
+      <div>
         <div className="slide-container">
           {images.map((image, i) => (
             <div
