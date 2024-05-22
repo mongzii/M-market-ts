@@ -57,7 +57,13 @@ export const CartState = createSlice({
 
     //cart에서 수량 조절하는 것, 마이너스
     countDown: (state, action) => {
-      state[action.payload].count--;
+      // state[action.payload].count--;
+      // console.log(state[action.payload].count--); //떨어지기전 수가 뜬다
+      {
+        state[action.payload].count-- >= 2
+          ? state[action.payload].count
+          : (alert("0이하는안돼요"), state[action.payload].count++);
+      }
     },
   },
 });
