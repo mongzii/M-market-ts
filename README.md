@@ -10,9 +10,7 @@ Next.js와 MongoDB를 이용하여 Fullstack으로 의류쇼핑몰 서비스를 
 
 ## 배포링크
 + 배포URL: <https://m-market-ts.vercel.app/>
-
 + Test Email: test@naver.com
-
 + Test password: 112
 
 ## ⚒️Tools
