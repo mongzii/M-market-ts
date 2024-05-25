@@ -68,33 +68,6 @@ export default function Item() {
           })}
         </div>
       )}
-      {/* <h2 className="title-cart">장바구니</h2>
-      {Item.map((el, i) => {
-        return (
-          <div className="cart-item" key={i}>
-            <div className="item1">
-              <p>{el.product}</p>
-            </div>
-            <div className="item2">
-              <p>{el.price}원</p>
-            </div>
-            <div className="item3">
-              <button onClick={() => handleUp(i)}>+</button>
-              <p>{el.count}</p>
-              <button onClick={() => handleDown(i)}>-</button>
-            </div>
-            <div className="item4">
-              <button
-                onClick={() =>
-                  handleDelete(el.id, el.product, el.price, el.count)
-                }
-              >
-                삭제
-              </button>
-            </div>
-          </div>
-        );
-      })} */}
     </div>
   );
 }
