@@ -1,9 +1,22 @@
-import NextAuth, { NextAuthOptions } from "next-auth";
+import NextAuth, { ISODateString, NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import { connectDB } from "@/util/database";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
+
 //import bcrypt from "bcrypt";
+
+interface Iuser {
+  name: string | null;
+  email: string | null;
+  iat: number | null;
+  exp: number | null;
+  jti: string | null;
+}
+interface IIuser {
+  user: Iuser | null;
+  expires: ISODateString;
+}
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -18,7 +31,7 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
 
-      async authorize(credentials) {
+      async authorize(credentials): Promise<any> {
         let db = (await connectDB).db("market");
         let me = await db
           .collection("user_cred")
@@ -37,7 +50,8 @@ export const authOptions: NextAuthOptions = {
           credentials?.email === me?.email &&
           credentials?.password === me?.password
         ) {
-          return me?.email;
+          return { name: me?.name, email: me?.email };
+          // return   me?.name,  me?.email ;
         } else {
           credentials?.email !== me?.email ||
             credentials?.password !== me?.password;
@@ -57,6 +71,9 @@ export const authOptions: NextAuthOptions = {
       user: any;
       account: any;
     }) => {
+      // if (user) {
+      //   console.log(user);
+      // }
       if (user) {
         //aaa로 로그인할경우를 말하는거같은디....
         // token = {};
@@ -68,8 +85,8 @@ export const authOptions: NextAuthOptions = {
           // return token;
         } else {
           token = {};
-          token.email = user;
-          token.name = user;
+          token.email = user.email;
+          token.name = user.name;
           // token.user.name = user;
           // console.log("ffff");
         }
@@ -83,8 +100,8 @@ export const authOptions: NextAuthOptions = {
       // console.log(session);
       if (token) {
         session.user = token;
-        //console.log(session);
-        //console.log(token);
+        // console.log(session);
+        // console.log(token);
       }
 
       return session;

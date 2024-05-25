@@ -28,7 +28,3 @@ export default function HeaderP() {
     </div>
   );
 }
-
-//loading이면 loading
-//authenticated이면 안녕하세요
-//아니면 로그인하세요
