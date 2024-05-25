@@ -377,6 +377,9 @@ body {
 }
 
 /* --------------------장바구니------------------------ */
+.login-cart {
+  text-align: center;
+}
 
 .title-cart {
   text-align: center;
