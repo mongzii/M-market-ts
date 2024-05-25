@@ -36,7 +36,7 @@ export default function Item() {
   return (
     <div>
       {status === "unauthenticated" ? (
-        <h1 className="login-cart">로그인 먼저하세요</h1>
+        <h1 className="login-yesno">로그인 먼저하세요</h1>
       ) : (
         <div>
           <h2 className="title-cart">cart페이지</h2>
