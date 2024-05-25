@@ -23,8 +23,6 @@ export default async function Qa() {
   return (
     <div className="qa-bg">
       <BoardItem data={data} />
-      {/* <BoardItem /> */}
-      {/* <DetailLink /> */}
     </div>
   );
 }
